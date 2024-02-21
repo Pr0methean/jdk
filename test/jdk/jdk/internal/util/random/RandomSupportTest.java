@@ -27,7 +27,7 @@ public class RandomSupportTest {
     }
     @Test
     public void testNextExponentialSoftCapped() {
-        for (long maxExp = 0; maxExp < 33; max++) {
+        for (long maxExp = 0; maxExp < 33; maxExp++) {
             double max = Math.scalb(1.0, maxExp);
             WorstCaseRandomGenerator rng = new WorstCaseRandomGenerator();
             assertTrue(RandomSupport.computeNextExponentialSoftCapped(rng, max) >= max);
