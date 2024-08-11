@@ -18,7 +18,7 @@ public class RandomSupportTest {
             if (havePreviousOutput) {
                 // gets shifted to 0x4000_0000_0000_0000, which puts us in the center of the sampling rectangle and
                 // ensures that we'll never choose a point under the curve
-                return Long.MIN_VALUE;
+                return Long.MIN_VALUE | 251;
             } else {
                 havePreviousOutput = true;
                 return Long.MIN_VALUE | 255; // need high value in last byte in order to skip the fast path
